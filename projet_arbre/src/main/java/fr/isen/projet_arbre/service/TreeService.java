@@ -22,12 +22,12 @@ public class TreeService {
         return treeRepository.findByQuartier(quartier);
     }
 
-    public List<Tree> getTreeBySecteur(String quartier) {
-        return treeRepository.findBySecteur(quartier);
+    public List<Tree> getTreeBySecteur(String secteur) {
+        return treeRepository.findBySecteur(secteur);
     }
 
-    public List<Tree> getTreeByEtat(String quartier) {
-        return treeRepository.findByEtat(quartier);
+    public List<Tree> getTreeByEtat(String etat) {
+        return treeRepository.findByEtat(etat);
     }
 
     public Tree addTree(Tree entity) {
