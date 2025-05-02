@@ -17,4 +17,40 @@ public class TreeService {
     public List<Tree> getAllTrees() {
         return treeRepository.findAll();
     }
+
+    public List<Tree> getTreeByQuartier(String quartier) {
+        return treeRepository.findByQuartier(quartier);
+    }
+
+    public List<Tree> getTreeBySecteur(String quartier) {
+        return treeRepository.findBySecteur(quartier);
+    }
+
+    public List<Tree> getTreeByEtat(String quartier) {
+        return treeRepository.findByEtat(quartier);
+    }
+
+    public Tree addTree(Tree entity) {
+        return treeRepository.save(entity);
+    }
+
+    public Tree updateTree(Long identifiant, Tree entity) {
+        return treeRepository.findById(identifiant)
+                .map(tree -> {
+                    tree.setQuartier(entity.getQuartier());
+                    tree.setSecteur(entity.getSecteur());
+                    tree.setHauteur(entity.getHauteur());
+                    tree.setDiametre(entity.getDiametre());
+                    tree.setLongitude(entity.getLongitude());
+                    tree.setLatitude(entity.getLatitude());
+                    tree.setAge(entity.getAge());
+                    tree.setEtat(entity.getEtat());
+                    return treeRepository.save(tree);
+                })
+                .orElseThrow(() -> new RuntimeException("Tree not found with id " + identifiant));
+    }
+
+    public void deleteTree(Long identifiant) {
+        treeRepository.deleteById(identifiant);
+    }
 }
