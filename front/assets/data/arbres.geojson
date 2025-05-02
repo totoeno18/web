@@ -1,0 +1,145 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [3.29326360936389, 49.840500205123] },
+      "properties": {
+        "clc_quartier": "Quartier du Centre-Ville",
+        "clc_secteur": "Quai Gayant",
+        "id_arbre": 19,
+        "haut_tot": 6.0,
+        "tronc_diam": 37,
+        "age_estim": 9.699052780747332,
+        "alerte_remplacement": 0,
+        "storm_alert": 0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [3.30238687765097, 49.8617777171499] },
+      "properties": {
+        "clc_quartier": "Quartier de l'Europe",
+        "clc_secteur": "Square des Marronniers",
+        "id_arbre": 48,
+        "haut_tot": 16.0,
+        "tronc_diam": 150,
+        "age_estim": 9.699052780747332,
+        "alerte_remplacement": 1,
+        "storm_alert": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [3.30553745769042, 49.8609281587516] },
+      "properties": {
+        "clc_quartier": "Quartier de l'Europe",
+        "clc_secteur": "Rue Laplace",
+        "id_arbre": 26,
+        "haut_tot": 8.0,
+        "tronc_diam": 103,
+        "age_estim": 9.699052780747332,
+        "alerte_remplacement": 1,
+        "storm_alert": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [3.27126447731581, 49.8378971710309] },
+      "properties": {
+        "clc_quartier": "Quartier Saint-Martin - Oëstres",
+        "clc_secteur": "Rue de Paris",
+        "id_arbre": 1,
+        "haut_tot": 6.0,
+        "tronc_diam": 100,
+        "age_estim": 9.699052780747332,
+        "alerte_remplacement": 1,
+        "storm_alert": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [3.27090070184093, 49.8377471700068] },
+      "properties": {
+        "clc_quartier": "Quartier Saint-Martin - Oëstres",
+        "clc_secteur": "Rue de Paris",
+        "id_arbre": 2,
+        "haut_tot": 8.0,
+        "tronc_diam": 85,
+        "age_estim": 9.699052780747332,
+        "alerte_remplacement": 1,
+        "storm_alert": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [3.27073222757654, 49.8376726168807] },
+      "properties": {
+        "clc_quartier": "Quartier Saint-Martin - Oëstres",
+        "clc_secteur": "Rue de Paris",
+        "id_arbre": 3,
+        "haut_tot": 8.0,
+        "tronc_diam": 105,
+        "age_estim": 9.699052780747332,
+        "alerte_remplacement": 1,
+        "storm_alert": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [3.27054202279862, 49.8375900220827] },
+      "properties": {
+        "clc_quartier": "Quartier Saint-Martin - Oëstres",
+        "clc_secteur": "Rue de Paris",
+        "id_arbre": 4,
+        "haut_tot": 9.0,
+        "tronc_diam": 135,
+        "age_estim": 9.699052780747332,
+        "alerte_remplacement": 1,
+        "storm_alert": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [3.27036398652782, 49.8375138245111] },
+      "properties": {
+        "clc_quartier": "Quartier Saint-Martin - Oëstres",
+        "clc_secteur": "Rue de Paris",
+        "id_arbre": 5,
+        "haut_tot": 9.0,
+        "tronc_diam": 121,
+        "age_estim": 9.699052780747332,
+        "alerte_remplacement": 1,
+        "storm_alert": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [3.26999873221424, 49.8373633466866] },
+      "properties": {
+        "clc_quartier": "Quartier Saint-Martin - Oëstres",
+        "clc_secteur": "Rue de Paris",
+        "id_arbre": 6,
+        "haut_tot": 9.0,
+        "tronc_diam": 107,
+        "age_estim": 9.699052780747332,
+        "alerte_remplacement": 1,
+        "storm_alert": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [3.26979318707569, 49.8372669944122] },
+      "properties": {
+        "clc_quartier": "Quartier Saint-Martin - Oëstres",
+        "clc_secteur": "Rue de Paris",
+        "id_arbre": 7,
+        "haut_tot": 9.0,
+        "tronc_diam": 125,
+        "age_estim": 9.699052780747332,
+        "alerte_remplacement": 1,
+        "storm_alert": 1
+      }
+    }
+  ]
+}

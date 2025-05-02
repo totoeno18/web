@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Filtrer les arbres</title>
+  <base href="./">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link href="https://api.mapbox.com/mapbox-gl-js/v3.0.1/mapbox-gl.css" rel="stylesheet" />
+  <script src="https://api.mapbox.com/mapbox-gl-js/v3.0.1/mapbox-gl.js"></script>
+  <script defer src="assets/js/app.js"></script>
+  <script defer src="assets/js/search.js"></script>
+</head>
+<body>
+  <header id="site-header"></header>
+
+  <main class="container">
+    <h2>Filtrer les arbres enregistrés</h2>
+
+    <!-- Formulaire de filtre -->
+    <form id="filter-form">
+      <label for="quartier-input">Quartier :</label>
+      <input type="text" id="quartier-input" name="quartier" placeholder="Centre">
+
+      <label for="secteur-input">Secteur :</label>
+      <input type="text" id="secteur-input" name="secteur" placeholder="Quai">
+
+      <label for="etat-input">État :</label>
+      <input type="text" id="etat-input" name="etat" placeholder="EN PLACE">
+
+      <button type="submit">Appliquer</button>
+    </form>
+
+    <div class="table-wrapper">
+      <table id="tree-table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Quartier</th>
+                <th>Hauteur</th>
+                <th>Diamètre</th>
+                <th>Coord.</th>
+            </tr>
+        </thead>
+        <tbody>
+          <!-- lignes injectées dynamiquement -->
+        </tbody>
+      </table>
+    </div>
+
+    <div id="map" class="map-container"></div>
+  </main>
+
+  <footer id="site-footer"></footer>
+</body>
+</html>
