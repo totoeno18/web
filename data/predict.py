@@ -1,18 +1,13 @@
-import sys
-import os
-import json
+# fichier : app.py
+from flask import Flask, request, jsonify
 import pickle
+import os
 
-# ✅ Récupère les paramètres envoyés par PHP
-haut = float(sys.argv[1])
-diam = float(sys.argv[2])
-lon = float(sys.argv[3])
-lat = float(sys.argv[4])
+app = Flask(__name__)
 
-# ✅ Chemin absolu du dossier courant
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
-# ✅ Charger les modèles .pkl
+# Chargement des modèles
 with open(os.path.join(BASE_DIR, "abre_age_predictor_Random_Forest.pkl"), "rb") as f:
     model_age = pickle.load(f)
 
@@ -22,19 +17,27 @@ with open(os.path.join(BASE_DIR, "arbre_chute_predictor_RandmForest.pkl"), "rb")
 with open(os.path.join(BASE_DIR, "modele_kmeaans.pkl"), "rb") as f:
     model_cluster = pickle.load(f)
 
-# ✅ Vecteur de prédiction
-X = [[haut, diam, lon, lat]]
+@app.route("/predict", methods=["POST"])
+def predict():
+    data = request.json
 
-# ✅ Prédictions
-age = model_age.predict(X)[0]
-risque = model_risque.predict(X)[0]
-cluster = model_cluster.predict(X)[0]
+    haut = float(data['hauteur'])
+    diam = float(data['diametre'])
+    lon = float(data['longitude'])
+    lat = float(data['latitude'])
 
-# ✅ Réponse JSON
-result = {
-    "age": round(age),
-    "risque": "Élevé" if risque == 1 else "Faible",
-    "cluster": int(cluster)
-}
+    X = [[haut, diam, lon, lat]]
 
-print(json.dumps(result))
+    # Prédictions
+    age = model_age.predict(X)[0]
+    risque = model_risque.predict(X)[0]
+    cluster = model_cluster.predict(X)[0]
+
+    return jsonify({
+        "age": round(age),
+        "risque": "Élevé" if risque == 1 else "Faible",
+        "cluster": int(cluster)
+    })
+
+if __name__ == "__main__":
+    app.run(port=5001)
